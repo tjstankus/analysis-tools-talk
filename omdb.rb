@@ -22,7 +22,7 @@ module OMDB
     def init_actors
       actors = data['Actors']
       if actors.nil?
-        'Sorry we could not find actors for that movie.'
+        'Sorry we could not find actors for the movie.'
       else
         actors
       end
@@ -52,7 +52,7 @@ RSpec.describe OMDB::Movie do
 
       it 'returns unsucessful search message' do
         expect(movie.actors).
-          to eq('Sorry we could not find actors for that movie.')
+          to eq('Sorry we could not find actors for the movie.')
       end
     end
   end
